@@ -1,0 +1,38 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFrameworks>netstandard2.0;netstandard2.1;net6.0;net7.0;net8.0</TargetFrameworks>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+	<LangVersion>latest</LangVersion>
+    <SignAssembly>true</SignAssembly>
+	<AssemblyOriginatorKeyFile>..\LazyDependencyInjection.snk</AssemblyOriginatorKeyFile>
+    <AssemblyVersion>1.0.0</AssemblyVersion>
+    <FileVersion>1.0.0</FileVersion>
+    <Version>1.0.0</Version>
+    <Company></Company>
+    <Authors>Leonid Salavatov</Authors>
+    <Copyright>Leonid Salavatov 2024</Copyright>
+    <PackageId>LazyDependencyInjection</PackageId>
+    <Product>LazyDependencyInjection</Product>
+    <Title>LazyDependencyInjection</Title>
+    <Description>Lazy injection for Microsoft.Extensions.DependencyInjection.
+Decorates registered services with lazy proxies that instantiate the original service only after the first method or property call.
+Intended to prevent the creation of unused injected dependencies.</Description>
+    <PackageTags>dynamic lazy proxy service wrapper decorator runtime lazy-injection dependency-injection di DependencyInjection service-provider service-collection</PackageTags>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageProjectUrl>https://github.com/mustaddon/LazyDependencyInjection</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/mustaddon/LazyDependencyInjection</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <NeutralLanguage />
+    <PackageReleaseNotes></PackageReleaseNotes>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="DispatchProxyAdvanced" Version="2.0.7" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="8.0.0" />
+  </ItemGroup>
+
+</Project>
