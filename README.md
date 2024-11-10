@@ -15,6 +15,9 @@ var services = new ServiceCollection()
      
      // DEFAULT: Adds for any service that has dependencies and injections into other services with multiple methods and dependencies
     .AddLazyProxy()
+    
+    // OR: Default analog with additional assembly condition for services
+    .AddLazyProxy(Assembly.GetExecutingAssembly())
 
     // OR: Adds only for specific services
     .AddLazyProxy(typeof(IExampleService1), typeof(IExampleService2))

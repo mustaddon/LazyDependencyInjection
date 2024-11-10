@@ -25,6 +25,7 @@ internal class ExampleService3<T>(
 {
     public T Method3(T a)
     {
+        var m1 = exampleService1.Method1(a!);
         var c = exampleService2.Count();
         return a;
     }

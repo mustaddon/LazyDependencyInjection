@@ -1,6 +1,7 @@
 ﻿using Example;
 using LazyDependencyInjection;
 using Microsoft.Extensions.DependencyInjection;
+using System.Reflection;
 
 var services = new ServiceCollection()
     .AddTransient<IExampleService1, ExampleService1>()
@@ -13,6 +14,9 @@ var services = new ServiceCollection()
 
     // DEFAULT: Adds for any service that has dependencies and injections into other services with multiple methods and dependencies
     .AddLazyProxy()
+
+    //// OR: Default analog with additional assembly condition for services
+    //.AddLazyProxy(Assembly.GetExecutingAssembly())
 
     //// OR: Adds only for specific services
     //.AddLazyProxy(typeof(IExampleService1), typeof(IExampleService2), typeof(IExampleService3<>))

@@ -1,4 +1,7 @@
-﻿namespace LazyDependencyInjection;
+﻿
+using System.Reflection;
+
+namespace LazyDependencyInjection;
 
 public static class ServiceFilters
 {
@@ -13,17 +16,21 @@ public static class ServiceFilters
         return x => x.Descriptor.HasDependenciesCountGreaterThan(0, excludeServiceProvider);
     }
 
+    public static Func<ServiceInfo, bool> IsServiceAssembly(params Assembly[] oneOfAssemblies)
+    {
+        var hashSet = new HashSet<Assembly>(oneOfAssemblies);
+        return x => hashSet.Contains(x.Descriptor.ServiceType.Assembly);
+    }
+
     public static Func<ServiceInfo, bool> IsServiceType(params Type[] oneOfTypes)
     {
         var hashSet = new HashSet<Type>(oneOfTypes);
-
         return x => hashSet.Contains(x.Descriptor.ServiceType);
     }
 
     public static Func<ServiceInfo, bool> IsInjectedTo(params Type[] oneOfTypes)
     {
         var hashSet = new HashSet<Type>(oneOfTypes);
-
         return x => x.Injections.Any(xx => hashSet.Contains(xx.ServiceType));
     }
 
