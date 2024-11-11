@@ -36,4 +36,4 @@ var services = new ServiceCollection()
 
 ### Concept
 <!-- ![](https://raw.githubusercontent.com/mustaddon/LazyDependencyInjection/master/dgrm.png) -->
-[<img src="https://raw.githubusercontent.com/mustaddon/LazyDependencyInjection/master/dgrm.png" width="600" />](https://app.dgrm.net/?u=https://raw.githubusercontent.com/mustaddon/LazyDependencyInjection/master/dgrm.png)
+[<img src="https://raw.githubusercontent.com/mustaddon/LazyDependencyInjection/master/dgrm.png" />](https://app.dgrm.net/?u=https://raw.githubusercontent.com/mustaddon/LazyDependencyInjection/master/dgrm.png)
