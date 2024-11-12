@@ -34,6 +34,12 @@ public static class ServiceFilters
         return x => x.Injections.Any(xx => hashSet.Contains(xx.ServiceType));
     }
 
+    public static Func<ServiceInfo, bool> IsInjectedTo(params Assembly[] oneOfAssemblies)
+    {
+        var hashSet = new HashSet<Assembly>(oneOfAssemblies);
+        return x => x.Injections.Any(xx => hashSet.Contains(xx.ServiceType.Assembly));
+    }
+
     public static Func<ServiceInfo, bool> Custom(Func<ServiceInfo, bool> predicate)
     {
         return predicate;

@@ -12,7 +12,8 @@ var services = new ServiceCollection()
     .AddTransient<ServiceWithManyUnusedDeps>()
 
 
-    // DEFAULT: Adds for any service that has dependencies and injections into other services with multiple methods and dependencies
+    // DEFAULT: Adds for any service that has dependencies
+    // and injections into other services with multiple methods and dependencies
     .AddLazyProxy()
 
     //// OR: Default analog with additional assembly condition for services

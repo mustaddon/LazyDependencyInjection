@@ -10,6 +10,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{E5B238FC-94B7-4383-B2E7-FE63381CAA1A}"
 	ProjectSection(SolutionItems) = preProject
 		.gitignore = .gitignore
+		dgrm.png = dgrm.png
 		LazyDependencyInjection.snk = LazyDependencyInjection.snk
 		LICENSE = LICENSE
 		pack.ps1 = pack.ps1

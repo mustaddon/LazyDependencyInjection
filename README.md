@@ -13,13 +13,14 @@ var services = new ServiceCollection()
     .AddTransient<IExampleService3, ExampleService3>()
     .AddTransient<ServiceWithManyUnusedDeps>()
      
-    // DEFAULT: Adds for any service that has dependencies and injections into other services with multiple methods and dependencies
+    // DEFAULT: Adds for any service that has dependencies 
+    // and injections into other services with multiple methods and dependencies
     .AddLazyProxy()
     
     // OR: Default analog with additional assembly condition for services
     .AddLazyProxy(Assembly.GetExecutingAssembly())
 
-    // OR: Adds only for specific services
+    // OR: Adds only for specified services
     .AddLazyProxy(typeof(IExampleService1), typeof(IExampleService2))
     
     // OR: Adds with your custom filter
