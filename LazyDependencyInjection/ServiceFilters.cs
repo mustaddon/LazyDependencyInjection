@@ -7,7 +7,7 @@ public static class ServiceFilters
 {
     public static Func<ServiceInfo, bool> Default()
     {
-        return x => x.Descriptor.ServiceType.Assembly.FullName?.StartsWith("Microsoft.") != true
+        return x => !x.Descriptor.ServiceType.IsSystemAssembly()
             && x.Descriptor.HasDependenciesCountGreaterThan(0, true)
             && x.Injections.Any(xx => xx.HasMethodsCountGreaterThan(1) && xx.HasDependenciesCountGreaterThan(1, true));
     }

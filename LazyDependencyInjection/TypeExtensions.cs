@@ -13,4 +13,14 @@ public static class TypeExtensions
             ?.Key as string)
             ?.StartsWith(ServiceRegistrar.KEY_PREFIX) == true;
     }
+
+    public static bool IsSystemAssembly(this Type type)
+    {
+        var assemblyName = type.Assembly.FullName;
+
+        if (assemblyName == null)
+            return false;
+
+        return assemblyName.StartsWith("System.") || assemblyName.StartsWith("Microsoft.");
+    }
 }
