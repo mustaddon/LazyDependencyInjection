@@ -5,6 +5,7 @@ using System.Reflection;
 
 var services = new ServiceCollection()
     .AddTransient<IExampleService1, ExampleService1>()
+    .AddKeyedTransient<IExampleService1, ExampleService1>("test")
     .AddTransient<IExampleService2, ExampleService2>()
     .AddTransient(typeof(IExampleService3<>), typeof(ExampleService3<>))
     .AddTransient<IExampleService3<ContractAB>, ExampleService3<ContractAB>>()
