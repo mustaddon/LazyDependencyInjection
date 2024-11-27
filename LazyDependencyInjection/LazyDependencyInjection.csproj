@@ -7,9 +7,9 @@
 	<LangVersion>latest</LangVersion>
     <SignAssembly>true</SignAssembly>
 	<AssemblyOriginatorKeyFile>..\LazyDependencyInjection.snk</AssemblyOriginatorKeyFile>
-    <AssemblyVersion>1.0.5</AssemblyVersion>
-    <FileVersion>1.0.5</FileVersion>
-    <Version>1.0.5</Version>
+    <AssemblyVersion>1.0.6</AssemblyVersion>
+    <FileVersion>1.0.6</FileVersion>
+    <Version>1.0.6</Version>
     <Company></Company>
     <Authors>Leonid Salavatov</Authors>
     <Copyright>Leonid Salavatov 2024</Copyright>
@@ -19,7 +19,7 @@
     <Description>Lazy injection for Microsoft.Extensions.DependencyInjection.
 Decorates registered services with lazy proxies that instantiate the original service only after the first method or property call.
 Intended to prevent the creation of unused injected dependencies.</Description>
-    <PackageTags>dynamic lazy proxy service wrapper decorator runtime lazy-injection dependency-injection di DependencyInjection service-provider service-collection optimization</PackageTags>
+    <PackageTags>dynamic lazy proxy service wrapper decorator runtime lazy-injection proxy-pattern virtual-proxy dependency-injection di DependencyInjection service-provider service-collection optimization</PackageTags>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <PackageProjectUrl>https://github.com/mustaddon/LazyDependencyInjection</PackageProjectUrl>
     <RepositoryUrl>https://github.com/mustaddon/LazyDependencyInjection</RepositoryUrl>

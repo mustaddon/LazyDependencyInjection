@@ -34,7 +34,7 @@ internal static class ServiceRegistrar
             else
             {
                 services.AddKeyedTransient(descriptor.ServiceType, serviceKey, descriptor.IsKeyedService
-                    ? descriptor.KeyedImplementationFactory!
+                    ? (s, k) => descriptor.KeyedImplementationFactory!(s, descriptor.ServiceKey)
                     : (s, k) => descriptor.ImplementationFactory!(s));
             }
         }
