@@ -1,4 +1,4 @@
-# LazyDependencyInjection [![NuGet version](https://badge.fury.io/nu/LazyDependencyInjection.svg?105)](http://badge.fury.io/nu/LazyDependencyInjection)
+# LazyDependencyInjection [![NuGet version](https://badge.fury.io/nu/LazyDependencyInjection.svg?106)](http://badge.fury.io/nu/LazyDependencyInjection)
 Lazy injection for Microsoft.Extensions.DependencyInjection using the [Proxy pattern](https://en.wikipedia.org/wiki/Proxy_pattern).\
 Decorates registered services with lazy proxies that instantiate the original service only after the first method or property call.\
 Intended to prevent the creation of unused injected dependencies.
